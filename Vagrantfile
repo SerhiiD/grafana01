@@ -12,7 +12,6 @@ Vagrant.configure(2) do |config|
 
         grafana01.vm.hostname = "grafana01"
 
-        grafana01.vm.provision "file", source: "grafana.repo", destination: "/tmp/grafana.repo"
         grafana01.vm.provision "shell", path: "script.sh"
     end
 end
